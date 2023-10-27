@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Tic tac toe</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
         <script src="scripts/game.js" defer></script>
     </head>
     <body>
@@ -19,6 +20,11 @@
 
         <div class="playerbox" id="right" data-current="false">
 
+        </div>
+
+        <div class="winnerbox" id="hidden">
+            <h1>Player has won!</h1>
+            <button onclick="replay()">Play again</button>
         </div>
     </body>
 </html>

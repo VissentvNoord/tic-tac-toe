@@ -1,10 +1,14 @@
+html,body{
+    font-family: "Anton", sans-serif;
+}
+
 body{
     display: grid;
-    height: 100%;
     align-content: center;
     justify-content: center;
 
     grid-template-columns: 100px 500px 100px;
+    grid-auto-columns: 700px;
 
     background-color: rgb(28, 28, 28);
 }
@@ -75,4 +79,57 @@ body{
 }
 .playerbox[data-current="true"]#right{
     border-left-width: 10px;
+}
+
+.winnerbox{
+    z-index: 99;
+    background-color: white;
+    justify-self: center;
+    grid-column-start: 2;
+    width: 500px;
+
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-content: center;
+}
+
+.winnerbox#visible{
+    height: 200px; /*set as neccessary */
+
+    transition: height 0.15s ease-out;
+}
+
+.winnerbox#hidden{
+    height: 0px;
+    transition: height .15s ease-in;
+}
+
+.winnerbox>h1{
+    font-weight: 1000;
+
+    align-self: center;
+}
+
+.winnerbox>button{
+    height: 100%;
+    margin: 10px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-color: transparent;
+}
+
+.winnerbox>button:hover{
+    background-color: lightblue;
+}
+
+#hidden>button{
+    display: none;
+}
+
+#hidden>h1{
+    display: none;
 }
